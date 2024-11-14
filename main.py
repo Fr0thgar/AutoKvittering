@@ -40,21 +40,24 @@ def browse_template_directory():
     if new_dir:
         update_template_dircetory(new_dir)
         # refresh template dropdown
-        template_files = get_template_files()
-        template_dropdown.configure(values=template_files)
-        if template_files:
-            template_var.set(template_files[0])
+        template_map = get_template_files()
+        template_dropdown.configure(values=list(template_map.keys()))
+        if template_map:
+            template_var.set(list(template_map.keys()[0]))
 
 def get_template_files():
     config = load_config()
     template_dir = config["template_directory"]
-    return glob.glob(os.path.join(template_dir, "*.docx"))
+    # get full paths but only display filenames
+    full_paths = glob.glob(os.path.join(template_dir, "*.docx"))
+    template_map = {os.path.basename(path): path for path in full_paths}
+    return template_map
 
 def submit_name(event=None):
     name = name_entry.get()
-    selected_template = template_var.get()
+    selected_template_name = template_var.get()
 
-    if name and selected_template: 
+    if name and selected_template_name: 
         # Get current month and date 
         current_month = datetime.now().strftime("%B")
         current_date = datetime.now().strftime("%d")
@@ -66,7 +69,7 @@ def submit_name(event=None):
         file_path = os.path.join(folder_path, f"{name}.docx")
 
         # Load the template document
-        template_path = selected_template
+        template_path = template_map[selected_template_name]
         shutil.copyfile(template_path, file_path)
 
         doc = docx.Document(file_path)
@@ -79,7 +82,6 @@ def submit_name(event=None):
         # Save the modified document
         output_path = os.path.join(folder_path, f"{name}.docx")
         doc.save(output_path)
-
 
         print("Document created: ", output_path)
     else:
@@ -97,11 +99,11 @@ template_label = customtkinter.CTkLabel(root, text="Select Template: ")
 template_label.pack()
 
 template_var =customtkinter.StringVar()
-template_files = get_template_files()
+template_map = get_template_files()
 template_dropdown = customtkinter.CTkOptionMenu(
     root,
     variable=template_var,
-    values=template_files
+    values=(list(template_map.keys())[0]) # only show filenames in dropdown
 )
 template_dropdown.pack()
 
@@ -113,8 +115,8 @@ settings_button = customtkinter.CTkButton(
 settings_button.pack(pady=10)
 
 # if template were found set default value
-if template_files:
-    template_var.set(template_files[0])
+if template_map:
+    template_var.set(list(template_map.keys())[0])
 
 # Create a label for the name input
 name_label = customtkinter.CTkLabel(root, text="Enter Name: ")
