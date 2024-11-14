@@ -1,7 +1,15 @@
 {
-    "template_directory": "C:/Users/jbs/Code/AutoKvittering",
+    "template_directory": "path/to/your/templates",
     "window_size": {
         "width": 500,
         "height": 400
+    },
+    "password_settings": {
+        "length": 12,
+        "use_uppercase": true,
+        "use_lowercase": true,
+        "use_digits": true,
+        "use_special": true,
+        "special_chars": "!@#$%^&*"
     }
 }

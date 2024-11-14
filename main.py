@@ -5,6 +5,8 @@ import glob
 import shutil
 import docx
 import customtkinter
+import random
+import string
 from datetime import *
 
 customtkinter.set_default_color_theme("./theme.json")
@@ -18,9 +20,17 @@ def load_config():
         # default config if file doesnt exist
         default_config = {
             "template_directory": os.path.join(os.getcwd(), "templates"),
-            "window_size": {"width": 500, "height": 400}
+            "window_size": {"width": 500, "height": 400},
+            "password_settings": {
+                "length": 12,
+                "use_uppercase": True,
+                "use_lowercase": True,
+                "use_digits": True,
+                "use_special": True,
+                "special_chars": "!@#$%^&*"
+            }
         }
-        # create config file with deafult values
+        # create config file with default values
         save_config(default_config)
         return default_config
 
@@ -54,11 +64,49 @@ def get_template_files():
     template_map = {os.path.basename(path): path for path in full_paths}
     return template_map
 
+def generate_secure_password():
+    config = load_config()
+    password_settings = config["password_settings"]
+    
+    # Initialize character sets based on config
+    chars = ""
+    required_chars = []
+    
+    if password_settings["use_lowercase"]:
+        chars += string.ascii_lowercase
+        required_chars.append(random.choice(string.ascii_lowercase))
+        
+    if password_settings["use_uppercase"]:
+        chars += string.ascii_uppercase
+        required_chars.append(random.choice(string.ascii_uppercase))
+        
+    if password_settings["use_digits"]:
+        chars += string.digits
+        required_chars.append(random.choice(string.digits))
+        
+    if password_settings["use_special"]:
+        special = password_settings["special_chars"]
+        chars += special
+        required_chars.append(random.choice(special))
+    
+    # Fill remaining length with random characters
+    remaining_length = password_settings["length"] - len(required_chars)
+    password = required_chars + [random.choice(chars) for _ in range(remaining_length)]
+    
+    # Shuffle the password
+    random.shuffle(password)
+    
+    return ''.join(password)
+
 def submit_name(event=None):
     name = name_entry.get()
+    username = username_entry.get()
     selected_template_name = template_var.get()
 
-    if name and selected_template_name: 
+    if name and username and selected_template_name: 
+        # Generate PIN for all templates
+        pin = str(random.randint(100000, 999999))
+
         # Get current month and date 
         current_month = datetime.now().strftime("%B")
         current_date = datetime.now().strftime("%d")
@@ -66,27 +114,85 @@ def submit_name(event=None):
         folder_path = os.path.join(os.getcwd(), current_year, current_month, current_date)
         os.makedirs(folder_path, exist_ok=True)
 
-        # Create folder paths
-        file_path = os.path.join(folder_path, f"{name}.docx")
+        # Create output path
+        output_path = os.path.join(folder_path, f"{name}.docx")
 
         # Load the template document
         template_path = template_map[selected_template_name]
-        shutil.copyfile(template_path, file_path)
+        shutil.copyfile(template_path, output_path)
 
-        doc = docx.Document(file_path)
+        doc = docx.Document(output_path)
 
-        # Replace placeholder with submitted name 
+        # Define possible placeholder formats
+        placeholders = ['[Name]', '[NAME]', '[name]','<Name>','<NAME>', '<name>']
+        pin_placeholders = ['[Pin]', '[PIN]', '[pin]']
+        username_placeholders = ['[Username]', '[USERNAME]', '[username]']
+        replacements_made = False
+
+        # Replace placeholders in paragraphs
         for paragraph in doc.paragraphs:
-            if "[Name]" in paragraph.text:
-                paragraph.text = paragraph.text.replace("[Name]", name)
+            original_text = paragraph.text
+            modified_text = original_text
+
+            # Replace all types of placeholders
+            for placeholder in placeholders:
+                if placeholder in modified_text:
+                    modified_text = modified_text.replace(placeholder, name)
+                    replacements_made = True
+            
+            for placeholder in pin_placeholders:
+                if placeholder in modified_text:
+                    modified_text = modified_text.replace(placeholder, pin)
+                    replacements_made = True
+                    
+            for placeholder in username_placeholders:
+                if placeholder in modified_text:
+                    modified_text = modified_text.replace(placeholder, username)
+                    replacements_made = True
+            
+            if original_text != modified_text:
+                paragraph.text = modified_text
+
+        # Replace placeholders in tables
+        for table in doc.tables:
+            for row in table.rows:
+                for cell in row.cells:
+                    for paragraph in cell.paragraphs:
+                        original_text = paragraph.text
+                        modified_text = original_text
+
+                        for placeholder in placeholders:
+                            if placeholder in modified_text:
+                                modified_text = modified_text.replace(placeholder, name)
+                                replacements_made = True
+                        
+                        for placeholder in pin_placeholders:
+                            if placeholder in modified_text:
+                                modified_text = modified_text.replace(placeholder, pin)
+                                replacements_made = True
+                                
+                        for placeholder in username_placeholders:
+                            if placeholder in modified_text:
+                                modified_text = modified_text.replace(placeholder, username)
+                                replacements_made = True
+                        
+                        if original_text != modified_text:
+                            paragraph.text = modified_text
 
         # Save the modified document
-        output_path = os.path.join(folder_path, f"{name}.docx")
         doc.save(output_path)
-
-        print("Document created: ", output_path)
+        
+        if replacements_made:
+            success_msg = f"Document created with replacements: {output_path}"
+            success_msg += f"\nGenerated PIN: {pin}"
+            print(success_msg)
+        else:
+            print(f"Warning: No placeholders found in template: {selected_template_name}")
+            print("Expected placeholders:", placeholders)
+            print("and:", pin_placeholders)
+            print("and:", username_placeholders)
     else:
-        print("Please enter a name and select a template.")
+        print("Please enter a name, username, and select a template.")
 
     
 # create the main app window
@@ -129,6 +235,16 @@ name_entry.pack()
 
 # Bind the Enter key to submit the name
 name_entry.bind("<Return>", lambda event: submit_name())
+
+# Add username label and entry after the name entry
+username_label = customtkinter.CTkLabel(root, text="Enter Username: ")
+username_label.pack()
+
+username_entry = customtkinter.CTkEntry(root)
+username_entry.pack()
+
+# Bind Enter key to username entry as well
+username_entry.bind("<Return>", lambda event: submit_name())
 
 # Create a button to submit the name
 submit_button = customtkinter.CTkButton(root, text="Submit", command=submit_name)
