@@ -1,0 +1,22 @@
+project_root/
+├── src/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── config_manager.py
+│   ├── document_processor.py
+│   ├── credential_generator.py
+│   ├── gui/
+│   │   ├── __init__.py
+│   │   ├── app.py
+│   │   └── components.py
+│   └── utils/
+│       ├── __init__.py
+│       └── logger.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_config_manager.py
+│   ├── test_document_processor.py
+│   └── test_credential_generator.py
+├── logs/
+├── config.json
+└── requirements.txt

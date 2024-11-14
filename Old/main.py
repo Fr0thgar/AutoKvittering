@@ -135,6 +135,7 @@ def submit_name(event=None):
     if selected_template_name: 
         # Generate PIN and password
         pin = str(random.randint(100000, 999999))
+        print_pin = pin[-4:]  # Get last 4 digits of PIN
         password = generate_secure_password()
 
         # Get current month and date 
@@ -153,11 +154,12 @@ def submit_name(event=None):
 
         doc = docx.Document(output_path)
 
-        # Define all placeholder types including password
+        # Define all placeholder types 
         placeholders = ['[Name]', '[NAME]', '[name]','<Name>','<NAME>', '<name>']
         pin_placeholders = ['[Pin]', '[PIN]', '[pin]']
+        print_pin_placeholders = ['[PrintPin]', '[PRINTPIN]', '[printpin]']
         username_placeholders = ['[Username]', '[USERNAME]', '[username]']
-        password_placeholders = ['[Password]', '[PASSWORD]', '[password]']  # Password placeholders
+        password_placeholders = ['[Password]', '[PASSWORD]', '[password]']
         replacements_made = False
 
         # Replace placeholders in paragraphs
@@ -176,12 +178,16 @@ def submit_name(event=None):
                     modified_text = modified_text.replace(placeholder, pin)
                     replacements_made = True
                     
+            for placeholder in print_pin_placeholders:
+                if placeholder in modified_text:
+                    modified_text = modified_text.replace(placeholder, print_pin)
+                    replacements_made = True
+                    
             for placeholder in username_placeholders:
                 if placeholder in modified_text:
                     modified_text = modified_text.replace(placeholder, username)
                     replacements_made = True
             
-            # Replace password placeholders
             for placeholder in password_placeholders:
                 if placeholder in modified_text:
                     modified_text = modified_text.replace(placeholder, password)
@@ -208,12 +214,16 @@ def submit_name(event=None):
                                 modified_text = modified_text.replace(placeholder, pin)
                                 replacements_made = True
                                 
+                        for placeholder in print_pin_placeholders:
+                            if placeholder in modified_text:
+                                modified_text = modified_text.replace(placeholder, print_pin)
+                                replacements_made = True
+                                
                         for placeholder in username_placeholders:
                             if placeholder in modified_text:
                                 modified_text = modified_text.replace(placeholder, username)
                                 replacements_made = True
-                                
-                        # Replace password placeholders in tables
+                        
                         for placeholder in password_placeholders:
                             if placeholder in modified_text:
                                 modified_text = modified_text.replace(placeholder, password)
@@ -233,6 +243,7 @@ def submit_name(event=None):
             print(f"Warning: No placeholders found in template: {selected_template_name}")
             print("Expected placeholders:", placeholders)
             print("and:", pin_placeholders)
+            print("and:", print_pin_placeholders)
             print("and:", username_placeholders)
     else:
         print("Please enter a name and select a template.")
