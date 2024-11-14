@@ -37,7 +37,7 @@ class TemplateSelector:
         )
         self.browse_button = customtkinter.CTkButton(
             self.frame,
-            text="Change Template Directory",
+            text="Browse",
             command=self.browse_directory
         )
         
