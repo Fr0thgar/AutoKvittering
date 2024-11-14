@@ -1,5 +1,6 @@
 {
-    "template_directory": "C:/Users/jbs/Code/AutoKvittering/templates",
+    "template_directory": "resources/templates",
+    "theme_directory": "resources/themes",
     "window_size": {
         "width": 500,
         "height": 400

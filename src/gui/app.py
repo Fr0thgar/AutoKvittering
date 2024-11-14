@@ -3,6 +3,7 @@ import os
 import glob
 from .components import InputField, TemplateSelector
 from utils.logger import Logger
+import json
 
 class DocumentProcessorApp:
     def __init__(self, config_manager, document_processor, credential_generator):
@@ -11,9 +12,33 @@ class DocumentProcessorApp:
         self.cred_generator = credential_generator
         self.logger = Logger()
         
+        # Load theme before creating the window
+        self.load_theme()
+        
         self.root = customtkinter.CTk()
         self.setup_window()
         self.create_widgets()
+    
+    def load_theme(self):
+        """Load custom theme from JSON file"""
+        try:
+            theme_path = os.path.join(
+                os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+                "resources",
+                "themes",
+                "theme.json"
+            )
+            
+            if os.path.exists(theme_path):
+                with open(theme_path, 'r') as f:
+                    theme = json.load(f)
+                customtkinter.set_default_color_theme(theme)
+                self.logger.info("Custom theme loaded successfully")
+            else:
+                self.logger.warning("Theme file not found, using default theme")
+                
+        except Exception as e:
+            self.logger.error(f"Error loading theme: {str(e)}")
     
     def on_return(self, event=None):
         """Handle Enter key press"""
@@ -23,14 +48,21 @@ class DocumentProcessorApp:
         """Get list of template files from the configured directory"""
         try:
             template_dir = self.config.config["template_directory"]
+            self.logger.info(f"Looking for templates in: {template_dir}")
+            
             # Get full paths but only display filenames
             full_paths = glob.glob(os.path.join(template_dir, "*.docx"))
+            
             # Return just the filenames
             template_names = [os.path.basename(path) for path in full_paths]
+            
             if not template_names:
-                self.logger.warning("No templates found in directory")
+                self.logger.warning(f"No templates found in {template_dir}")
                 return ["No templates found"]
+                
+            self.logger.info(f"Found templates: {template_names}")
             return template_names
+            
         except Exception as e:
             self.logger.error(f"Error getting template list: {str(e)}")
             return ["Error loading templates"]

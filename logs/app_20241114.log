@@ -20,3 +20,14 @@
 2024-11-14 14:47:41,519 - DocumentProcessor - INFO - Starting application
 2024-11-14 14:48:20,754 - DocumentProcessor - INFO - Starting application
 2024-11-14 14:51:12,602 - DocumentProcessor - INFO - Starting application
+2024-11-14 14:58:36,851 - DocumentProcessor - INFO - Starting application
+2024-11-14 14:58:36,853 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-14 14:58:36,853 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-14 14:58:36,853 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-14 14:58:36,853 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-14 14:58:36,853 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-14 14:58:37,002 - DocumentProcessor - WARNING - No templates found in directory
+2024-11-14 14:58:37,002 - DocumentProcessor - WARNING - No templates found in directory
+2024-11-14 14:58:37,002 - DocumentProcessor - WARNING - No templates found in directory
+2024-11-14 14:58:37,002 - DocumentProcessor - WARNING - No templates found in directory
+2024-11-14 14:58:37,002 - DocumentProcessor - WARNING - No templates found in directory
