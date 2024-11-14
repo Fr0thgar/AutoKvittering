@@ -116,22 +116,6 @@ def generate_secure_password():
     
     return ''.join(password)
 
-def toggle_input_fields(*args):
-    selected_template = template_var.get()
-    if selected_template == "Lagermedarbejder_skabelon.docx":
-        # Hide username input
-        username_label.pack_forget()
-        username_entry.pack_forget()
-        # Ensure name input is visible
-        name_label.pack()
-        name_entry.pack()
-    else:
-        # Show all inputs
-        name_label.pack()
-        name_entry.pack()
-        username_label.pack()
-        username_entry.pack()
-
 def submit_name(event=None):
     name = name_entry.get()
     selected_template_name = template_var.get()
@@ -269,8 +253,7 @@ template_map = get_template_files()
 template_dropdown = customtkinter.CTkOptionMenu(
     root,
     variable=template_var,
-    values=list(template_map.keys()) if template_map else ["No templates found"],
-    command=toggle_input_fields
+    values=list(template_map.keys()) if template_map else ["No templates found"]
 )
 template_dropdown.pack()
 
@@ -280,13 +263,6 @@ settings_button = customtkinter.CTkButton(
     command=browse_template_directory
 )
 settings_button.pack(pady=10)
-
-# If templates were found, set default value and trigger initial toggle
-if template_map:
-    template_var.set(list(template_map.keys())[0])
-    toggle_input_fields()
-else:
-    template_var.set("No templates found")
 
 # Create a label for the name input
 name_label = customtkinter.CTkLabel(root, text="Enter Name: ")
@@ -309,8 +285,51 @@ username_entry.pack()
 # Bind Enter key to username entry as well
 username_entry.bind("<Return>", lambda event: submit_name())
 
+# Add some spacing before the submit button
+spacing_label = customtkinter.CTkLabel(root, text="")
+spacing_label.pack(pady=10)
+
 # Create a button to submit the name
 submit_button = customtkinter.CTkButton(root, text="Submit", command=submit_name)
-submit_button.pack()
+submit_button.pack(pady=10)  # Add padding to the submit button
+
+# Now that all GUI elements exist, we can set up the toggle function
+def toggle_input_fields(*args):
+    selected_template = template_var.get()
+    # First, remove all elements that might need reordering
+    username_label.pack_forget()
+    username_entry.pack_forget()
+    spacing_label.pack_forget()
+    submit_button.pack_forget()
+    
+    if selected_template == "Lagermedarbejder_skabelon.docx":
+        # Hide username input
+        username_label.pack_forget()
+        username_entry.pack_forget()
+        # Ensure name input is visible
+        name_label.pack()
+        name_entry.pack()
+        # Ensure submit button stays at bottom
+        spacing_label.pack(pady=10)
+        submit_button.pack(pady=10)
+    else:
+        # Show all inputs in correct order
+        name_label.pack()
+        name_entry.pack()
+        username_label.pack()
+        username_entry.pack()
+        # Ensure submit button stays at bottom
+        spacing_label.pack(pady=10)
+        submit_button.pack(pady=10)
+
+# Configure the dropdown to use the toggle function
+template_dropdown.configure(command=toggle_input_fields)
+
+# If templates were found, set default value and trigger initial toggle
+if template_map:
+    template_var.set(list(template_map.keys())[0])
+    toggle_input_fields()
+else:
+    template_var.set("No templates found")
 
 root.mainloop()
