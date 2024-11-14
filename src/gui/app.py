@@ -103,11 +103,13 @@ class DocumentProcessorApp:
     def create_widgets(self):
         # Create main container frames
         self.top_frame = customtkinter.CTkFrame(self.root)
+        self.status_frame = customtkinter.CTkFrame(self.root)  # New status frame
         self.input_frame = customtkinter.CTkFrame(self.root)
         self.button_frame = customtkinter.CTkFrame(self.root)
         
-        # Pack frames with proper spacing
+        # Pack frames
         self.top_frame.pack(fill='x', padx=10, pady=5)
+        self.status_frame.pack(fill='x', padx=10, pady=(0, 5))  # Add status frame
         self.input_frame.pack(fill='x', padx=10, pady=5)
         self.button_frame.pack(fill='x', padx=10, pady=5)
 
@@ -118,6 +120,22 @@ class DocumentProcessorApp:
             self.on_template_change
         )
         self.template_selector.pack()
+        
+        # Status label in status frame
+        self.status_label = customtkinter.CTkLabel(
+            self.status_frame,
+            text="Please select a template",
+            text_color="gray"
+        )
+        self.status_label.pack(pady=5)
+        
+        # Template info label
+        self.template_info = customtkinter.CTkLabel(
+            self.status_frame,
+            text="",
+            text_color="gray"
+        )
+        self.template_info.pack(pady=(0, 5))
         
         # Input fields in input frame
         self.name_input = InputField(
@@ -142,6 +160,25 @@ class DocumentProcessorApp:
         )
         self.submit_button.pack(pady=10)
     
+    def update_status(self, message, color="gray"):
+        """Update status label with message and color"""
+        self.status_label.configure(text=message, text_color=color)
+
+    def update_template_info(self, template_name):
+        """Update template info based on selected template"""
+        if template_name == "Lagermedarbejder_skabelon.docx":
+            info = "This template requires: Name only"
+            self.template_info.configure(
+                text=info,
+                text_color="blue"
+            )
+        else:
+            info = "This template requires: Name and Username"
+            self.template_info.configure(
+                text=info,
+                text_color="blue"
+            )
+
     def on_template_change(self, *args):
         """Handle template selection changes"""
         selected_template = self.template_selector.get()
@@ -150,14 +187,17 @@ class DocumentProcessorApp:
         self.name_input.pack_forget()
         self.username_input.pack_forget()
         
-        # Show appropriate fields based on template
+        # Show appropriate fields and update status based on template
         if selected_template == "Lagermedarbejder_skabelon.docx":
             self.name_input.pack()
+            self.update_status("Lagermedarbejder template selected", "green")
         else:
             self.name_input.pack()
             self.username_input.pack()
+            self.update_status("Brugeroplysninger template selected", "green")
         
-        # No need to repack the submit button as it's in its own frame
+        # Update template info
+        self.update_template_info(selected_template)
     
     def process_document(self):
         """Process the document with the current inputs"""
@@ -167,25 +207,28 @@ class DocumentProcessorApp:
             template = self.template_selector.get()
             
             if not self.validate_inputs(template, name, username):
+                self.update_status("Please fill in all required fields", "red")
                 return
+            
+            # Update status during processing
+            self.update_status("Processing document...", "blue")
+            self.root.update()  # Force GUI update
             
             # Generate credentials
             pin = self.cred_generator.generate_pin()
             print_pin = self.cred_generator.get_print_pin(pin)
             password = self.cred_generator.generate_password()
             
-            # Create replacements dictionary
+            # Create replacements and process document
             replacements = self.create_replacements_dict(
                 name, username, pin, print_pin, password
             )
             
-            # Get template path
             template_path = os.path.join(
                 self.config.config["template_directory"],
                 template
             )
             
-            # Process document
             success, message = self.doc_processor.process_document(
                 template_path,
                 self.get_output_path(name),
