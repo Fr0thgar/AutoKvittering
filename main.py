@@ -15,7 +15,25 @@ customtkinter.set_default_color_theme("./theme.json")
 def load_config():
     try:
         with open('config.json', 'r') as f:
-            return json.load(f)
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                print("Config file is corrupted, creating new one with defaults")
+                # If JSON is invalid, use defaults
+                default_config = {
+                    "template_directory": os.path.join(os.getcwd(), "templates"),
+                    "window_size": {"width": 500, "height": 400},
+                    "password_settings": {
+                        "length": 12,
+                        "use_uppercase": True,
+                        "use_lowercase": True,
+                        "use_digits": True,
+                        "use_special": True,
+                        "special_chars": "!@#$%^&*"
+                    }
+                }
+                save_config(default_config)
+                return default_config
     except FileNotFoundError:
         # default config if file doesnt exist
         default_config = {
@@ -98,15 +116,42 @@ def generate_secure_password():
     
     return ''.join(password)
 
+def toggle_input_fields(*args):
+    selected_template = template_var.get()
+    if selected_template == "Lagermedarbejder_skabelon.docx":
+        # Hide username input
+        username_label.pack_forget()
+        username_entry.pack_forget()
+        # Ensure name input is visible
+        name_label.pack()
+        name_entry.pack()
+    else:
+        # Show all inputs
+        name_label.pack()
+        name_entry.pack()
+        username_label.pack()
+        username_entry.pack()
+
 def submit_name(event=None):
     name = name_entry.get()
-    username = username_entry.get()
     selected_template_name = template_var.get()
 
-    if name and username and selected_template_name: 
+    # Different validation based on template
+    if selected_template_name == "Lagermedarbejder_skabelon.docx":
+        if not name:
+            print("Please enter a name.")
+            return
+        username = ""  # Not needed for this template
+    else:
+        username = username_entry.get()
+        if not (name and username):
+            print("Please enter a name and username.")
+            return
+
+    if selected_template_name: 
         # Generate PIN and password
         pin = str(random.randint(100000, 999999))
-        password = generate_secure_password()  # This generates the password using config settings
+        password = generate_secure_password()
 
         # Get current month and date 
         current_month = datetime.now().strftime("%B")
@@ -206,7 +251,7 @@ def submit_name(event=None):
             print("and:", pin_placeholders)
             print("and:", username_placeholders)
     else:
-        print("Please enter a name, username, and select a template.")
+        print("Please enter a name and select a template.")
 
     
 # create the main app window
@@ -224,7 +269,8 @@ template_map = get_template_files()
 template_dropdown = customtkinter.CTkOptionMenu(
     root,
     variable=template_var,
-    values=list(template_map.keys())  # Only show filenames in dropdown
+    values=list(template_map.keys()) if template_map else ["No templates found"],
+    command=toggle_input_fields
 )
 template_dropdown.pack()
 
@@ -235,9 +281,12 @@ settings_button = customtkinter.CTkButton(
 )
 settings_button.pack(pady=10)
 
-# If templates were found, set default value
+# If templates were found, set default value and trigger initial toggle
 if template_map:
     template_var.set(list(template_map.keys())[0])
+    toggle_input_fields()
+else:
+    template_var.set("No templates found")
 
 # Create a label for the name input
 name_label = customtkinter.CTkLabel(root, text="Enter Name: ")
