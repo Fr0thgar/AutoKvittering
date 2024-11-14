@@ -28,7 +28,7 @@ def save_config(config):
     with open('config.json', 'w') as f:
         json.dump(config, indent=4)
 
-def update_template_dircetory(new_path):
+def update_template_directory(new_path):
     config = load_config()
     config["template_directory"] = new_path
     save_config(config)
@@ -38,18 +38,19 @@ def browse_template_directory():
     config = load_config()
     new_dir = filedialog.askdirectory(initialdir=config["template_directory"])
     if new_dir:
-        update_template_dircetory(new_dir)
-        # refresh template dropdown
+        update_template_directory(new_dir)
+        # Refresh template dropdown
         template_map = get_template_files()
         template_dropdown.configure(values=list(template_map.keys()))
         if template_map:
-            template_var.set(list(template_map.keys()[0]))
+            template_var.set(list(template_map.keys())[0])
 
 def get_template_files():
     config = load_config()
     template_dir = config["template_directory"]
-    # get full paths but only display filenames
+    # Get full paths but only display filenames
     full_paths = glob.glob(os.path.join(template_dir, "*.docx"))
+    # Create a dictionary mapping display names to full paths
     template_map = {os.path.basename(path): path for path in full_paths}
     return template_map
 
@@ -98,12 +99,12 @@ root.geometry(f"{config['window_size']['width']}x{config['window_size']['height'
 template_label = customtkinter.CTkLabel(root, text="Select Template: ")
 template_label.pack()
 
-template_var =customtkinter.StringVar()
+template_var = customtkinter.StringVar()
 template_map = get_template_files()
 template_dropdown = customtkinter.CTkOptionMenu(
     root,
     variable=template_var,
-    values=(list(template_map.keys())[0]) # only show filenames in dropdown
+    values=list(template_map.keys())  # Only show filenames in dropdown
 )
 template_dropdown.pack()
 
@@ -114,7 +115,7 @@ settings_button = customtkinter.CTkButton(
 )
 settings_button.pack(pady=10)
 
-# if template were found set default value
+# If templates were found, set default value
 if template_map:
     template_var.set(list(template_map.keys())[0])
 
