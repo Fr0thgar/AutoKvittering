@@ -25,24 +25,28 @@ class InputField:
 
 class TemplateSelector:
     def __init__(self, parent, templates, on_change=None):
-        self.label = customtkinter.CTkLabel(parent, text="Select Template:")
+        self.frame = customtkinter.CTkFrame(parent)
+        
+        self.label = customtkinter.CTkLabel(self.frame, text="Select Template:")
         self.var = customtkinter.StringVar()
         self.dropdown = customtkinter.CTkOptionMenu(
-            parent,
+            self.frame,
             variable=self.var,
             values=templates,
             command=on_change
         )
         self.browse_button = customtkinter.CTkButton(
-            parent,
+            self.frame,
             text="Change Template Directory",
             command=self.browse_directory
         )
+        
+        self.label.pack(pady=(5,0))
+        self.dropdown.pack(pady=(0,5))
+        self.browse_button.pack(pady=(0,5))
     
     def pack(self):
-        self.label.pack()
-        self.dropdown.pack()
-        self.browse_button.pack(pady=10)
+        self.frame.pack(fill='x', padx=5, pady=2)
     
     def get(self):
         return self.var.get()

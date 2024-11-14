@@ -15,6 +15,10 @@ class DocumentProcessorApp:
         self.setup_window()
         self.create_widgets()
     
+    def on_return(self, event=None):
+        """Handle Enter key press"""
+        self.process_document()
+    
     def get_template_list(self):
         """Get list of template files from the configured directory"""
         try:
@@ -97,52 +101,66 @@ class DocumentProcessorApp:
         self.root.geometry(f"{window_size['width']}x{window_size['height']}")
     
     def create_widgets(self):
-        # Template selector
+        # Create main container frames
+        self.top_frame = customtkinter.CTkFrame(self.root)
+        self.input_frame = customtkinter.CTkFrame(self.root)
+        self.button_frame = customtkinter.CTkFrame(self.root)
+        
+        # Pack frames with proper spacing
+        self.top_frame.pack(fill='x', padx=10, pady=5)
+        self.input_frame.pack(fill='x', padx=10, pady=5)
+        self.button_frame.pack(fill='x', padx=10, pady=5)
+
+        # Template selector in top frame
         self.template_selector = TemplateSelector(
-            self.root,
+            self.top_frame,
             self.get_template_list(),
             self.on_template_change
         )
         self.template_selector.pack()
         
-        # Input fields
+        # Input fields in input frame
         self.name_input = InputField(
-            self.root,
+            self.input_frame,
             "Enter Name:",
             self.on_return
         )
         self.name_input.pack()
         
         self.username_input = InputField(
-            self.root,
+            self.input_frame,
             "Enter Username:",
             self.on_return
         )
         self.username_input.pack()
         
-        # Spacing
-        self.spacing = customtkinter.CTkLabel(self.root, text="")
-        self.spacing.pack(pady=10)
-        
-        # Submit button
+        # Submit button in button frame
         self.submit_button = customtkinter.CTkButton(
-            self.root,
+            self.button_frame,
             text="Submit",
             command=self.process_document
         )
         self.submit_button.pack(pady=10)
     
     def on_template_change(self, *args):
-        template = self.template_selector.get()
-        if template == "Lagermedarbejder_skabelon.docx":
-            self.username_input.pack_forget()
+        """Handle template selection changes"""
+        selected_template = self.template_selector.get()
+        
+        # First hide all input fields
+        self.name_input.pack_forget()
+        self.username_input.pack_forget()
+        
+        # Show appropriate fields based on template
+        if selected_template == "Lagermedarbejder_skabelon.docx":
+            self.name_input.pack()
         else:
             self.name_input.pack()
             self.username_input.pack()
-        self.spacing.pack(pady=10)
-        self.submit_button.pack(pady=10)
+        
+        # No need to repack the submit button as it's in its own frame
     
     def process_document(self):
+        """Process the document with the current inputs"""
         try:
             name = self.name_input.get()
             username = self.username_input.get()
@@ -161,14 +179,26 @@ class DocumentProcessorApp:
                 name, username, pin, print_pin, password
             )
             
+            # Get template path
+            template_path = os.path.join(
+                self.config.config["template_directory"],
+                template
+            )
+            
             # Process document
             success, message = self.doc_processor.process_document(
-                template,
+                template_path,
                 self.get_output_path(name),
                 replacements
             )
             
-            self.show_result(success, message)
+            if success:
+                self.show_result(True, f"Document created successfully\nPIN: {pin}")
+                # Optionally clear inputs
+                self.name_input.set("")
+                self.username_input.set("")
+            else:
+                self.show_result(False, f"Error creating document: {message}")
             
         except Exception as e:
             self.logger.error(f"Error processing document: {str(e)}")
