@@ -104,8 +104,9 @@ def submit_name(event=None):
     selected_template_name = template_var.get()
 
     if name and username and selected_template_name: 
-        # Generate PIN for all templates
+        # Generate PIN and password
         pin = str(random.randint(100000, 999999))
+        password = generate_secure_password()  # This generates the password using config settings
 
         # Get current month and date 
         current_month = datetime.now().strftime("%B")
@@ -123,10 +124,11 @@ def submit_name(event=None):
 
         doc = docx.Document(output_path)
 
-        # Define possible placeholder formats
+        # Define all placeholder types including password
         placeholders = ['[Name]', '[NAME]', '[name]','<Name>','<NAME>', '<name>']
         pin_placeholders = ['[Pin]', '[PIN]', '[pin]']
         username_placeholders = ['[Username]', '[USERNAME]', '[username]']
+        password_placeholders = ['[Password]', '[PASSWORD]', '[password]']  # Password placeholders
         replacements_made = False
 
         # Replace placeholders in paragraphs
@@ -148,6 +150,12 @@ def submit_name(event=None):
             for placeholder in username_placeholders:
                 if placeholder in modified_text:
                     modified_text = modified_text.replace(placeholder, username)
+                    replacements_made = True
+            
+            # Replace password placeholders
+            for placeholder in password_placeholders:
+                if placeholder in modified_text:
+                    modified_text = modified_text.replace(placeholder, password)
                     replacements_made = True
             
             if original_text != modified_text:
@@ -174,6 +182,12 @@ def submit_name(event=None):
                         for placeholder in username_placeholders:
                             if placeholder in modified_text:
                                 modified_text = modified_text.replace(placeholder, username)
+                                replacements_made = True
+                                
+                        # Replace password placeholders in tables
+                        for placeholder in password_placeholders:
+                            if placeholder in modified_text:
+                                modified_text = modified_text.replace(placeholder, password)
                                 replacements_made = True
                         
                         if original_text != modified_text:
