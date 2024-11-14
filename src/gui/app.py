@@ -1,4 +1,6 @@
 import customtkinter
+import os
+import glob
 from .components import InputField, TemplateSelector
 from utils.logger import Logger
 
@@ -12,6 +14,82 @@ class DocumentProcessorApp:
         self.root = customtkinter.CTk()
         self.setup_window()
         self.create_widgets()
+    
+    def get_template_list(self):
+        """Get list of template files from the configured directory"""
+        try:
+            template_dir = self.config.config["template_directory"]
+            # Get full paths but only display filenames
+            full_paths = glob.glob(os.path.join(template_dir, "*.docx"))
+            # Return just the filenames
+            template_names = [os.path.basename(path) for path in full_paths]
+            if not template_names:
+                self.logger.warning("No templates found in directory")
+                return ["No templates found"]
+            return template_names
+        except Exception as e:
+            self.logger.error(f"Error getting template list: {str(e)}")
+            return ["Error loading templates"]
+    
+    def get_output_path(self, name):
+        """Generate output path for the document"""
+        from datetime import datetime
+        current_year = datetime.now().strftime("%Y")
+        current_month = datetime.now().strftime("%B")
+        current_date = datetime.now().strftime("%d")
+        
+        output_dir = os.path.join(
+            os.getcwd(),
+            current_year,
+            current_month,
+            current_date
+        )
+        return os.path.join(output_dir, f"{name}.docx")
+    
+    def create_replacements_dict(self, name, username, pin, print_pin, password):
+        """Create dictionary of replacements for the document"""
+        return {
+            "[Name]": name,
+            "[NAME]": name.upper(),
+            "[name]": name.lower(),
+            "[Username]": username,
+            "[USERNAME]": username.upper(),
+            "[username]": username.lower(),
+            "[Pin]": pin,
+            "[PIN]": pin,
+            "[pin]": pin,
+            "[PrintPin]": print_pin,
+            "[PRINTPIN]": print_pin,
+            "[printpin]": print_pin,
+            "[Password]": password,
+            "[PASSWORD]": password,
+            "[password]": password
+        }
+    
+    def validate_inputs(self, template, name, username):
+        """Validate user inputs"""
+        if not template or template == "No templates found":
+            self.logger.error("No template selected")
+            return False
+            
+        if not name:
+            self.logger.error("Name is required")
+            return False
+            
+        if template != "Lagermedarbejder_skabelon.docx" and not username:
+            self.logger.error("Username is required for this template")
+            return False
+            
+        return True
+    
+    def show_result(self, success, message):
+        """Show result to user"""
+        if success:
+            self.logger.info(message)
+            # You could add a popup or status label here
+        else:
+            self.logger.error(message)
+            # You could add an error popup here
     
     def setup_window(self):
         window_size = self.config.config["window_size"]

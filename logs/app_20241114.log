@@ -1,0 +1,12 @@
+2024-11-14 14:35:16,007 - DocumentProcessor - INFO - Starting application
+2024-11-14 14:35:16,165 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'get_template_list'
+2024-11-14 14:35:16,165 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'get_template_list'
+2024-11-14 14:35:16,165 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'get_template_list'
+2024-11-14 14:35:16,165 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'get_template_list'
+2024-11-14 14:35:16,165 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'get_template_list'
+2024-11-14 14:37:14,454 - DocumentProcessor - INFO - Starting application
+2024-11-14 14:37:14,573 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'get_template_list'
+2024-11-14 14:37:14,573 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'get_template_list'
+2024-11-14 14:37:14,573 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'get_template_list'
+2024-11-14 14:37:14,573 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'get_template_list'
+2024-11-14 14:37:14,573 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'get_template_list'
