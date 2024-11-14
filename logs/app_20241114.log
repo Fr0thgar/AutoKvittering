@@ -31,3 +31,74 @@
 2024-11-14 14:58:37,002 - DocumentProcessor - WARNING - No templates found in directory
 2024-11-14 14:58:37,002 - DocumentProcessor - WARNING - No templates found in directory
 2024-11-14 14:58:37,002 - DocumentProcessor - WARNING - No templates found in directory
+2024-11-14 15:02:17,188 - DocumentProcessor - INFO - Starting application
+2024-11-14 15:02:17,193 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-14 15:02:17,193 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-14 15:02:17,193 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-14 15:02:17,193 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-14 15:02:17,193 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-14 15:02:17,605 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-14 15:02:17,605 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-14 15:02:17,605 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-14 15:02:17,605 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-14 15:02:17,605 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-14 15:02:17,617 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-14 15:02:17,617 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-14 15:02:17,617 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-14 15:02:17,617 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-14 15:02:17,617 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-14 15:02:30,774 - DocumentProcessor - ERROR - Name is required
+2024-11-14 15:02:30,774 - DocumentProcessor - ERROR - Name is required
+2024-11-14 15:02:30,774 - DocumentProcessor - ERROR - Name is required
+2024-11-14 15:02:30,774 - DocumentProcessor - ERROR - Name is required
+2024-11-14 15:02:30,774 - DocumentProcessor - ERROR - Name is required
+2024-11-14 15:02:38,025 - DocumentProcessor - INFO - Generated new PIN
+2024-11-14 15:02:38,025 - DocumentProcessor - INFO - Generated new PIN
+2024-11-14 15:02:38,025 - DocumentProcessor - INFO - Generated new PIN
+2024-11-14 15:02:38,025 - DocumentProcessor - INFO - Generated new PIN
+2024-11-14 15:02:38,025 - DocumentProcessor - INFO - Generated new PIN
+2024-11-14 15:02:38,027 - DocumentProcessor - INFO - Generated new password
+2024-11-14 15:02:38,027 - DocumentProcessor - INFO - Generated new password
+2024-11-14 15:02:38,027 - DocumentProcessor - INFO - Generated new password
+2024-11-14 15:02:38,027 - DocumentProcessor - INFO - Generated new password
+2024-11-14 15:02:38,027 - DocumentProcessor - INFO - Generated new password
+2024-11-14 15:02:38,090 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\14\test 2.docx
+2024-11-14 15:02:38,090 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\14\test 2.docx
+2024-11-14 15:02:38,090 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\14\test 2.docx
+2024-11-14 15:02:38,090 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\14\test 2.docx
+2024-11-14 15:02:38,090 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\14\test 2.docx
+2024-11-14 15:02:38,092 - DocumentProcessor - INFO - Document created successfully
+PIN: 491863
+2024-11-14 15:02:38,092 - DocumentProcessor - INFO - Document created successfully
+PIN: 491863
+2024-11-14 15:02:38,092 - DocumentProcessor - INFO - Document created successfully
+PIN: 491863
+2024-11-14 15:02:38,092 - DocumentProcessor - INFO - Document created successfully
+PIN: 491863
+2024-11-14 15:02:38,092 - DocumentProcessor - INFO - Document created successfully
+PIN: 491863
+2024-11-14 15:02:48,691 - DocumentProcessor - INFO - Generated new PIN
+2024-11-14 15:02:48,691 - DocumentProcessor - INFO - Generated new PIN
+2024-11-14 15:02:48,691 - DocumentProcessor - INFO - Generated new PIN
+2024-11-14 15:02:48,691 - DocumentProcessor - INFO - Generated new PIN
+2024-11-14 15:02:48,691 - DocumentProcessor - INFO - Generated new PIN
+2024-11-14 15:02:48,692 - DocumentProcessor - INFO - Generated new password
+2024-11-14 15:02:48,692 - DocumentProcessor - INFO - Generated new password
+2024-11-14 15:02:48,692 - DocumentProcessor - INFO - Generated new password
+2024-11-14 15:02:48,692 - DocumentProcessor - INFO - Generated new password
+2024-11-14 15:02:48,692 - DocumentProcessor - INFO - Generated new password
+2024-11-14 15:02:48,730 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\14\tet2.docx
+2024-11-14 15:02:48,730 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\14\tet2.docx
+2024-11-14 15:02:48,730 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\14\tet2.docx
+2024-11-14 15:02:48,730 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\14\tet2.docx
+2024-11-14 15:02:48,730 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\14\tet2.docx
+2024-11-14 15:02:48,732 - DocumentProcessor - INFO - Document created successfully
+PIN: 687520
+2024-11-14 15:02:48,732 - DocumentProcessor - INFO - Document created successfully
+PIN: 687520
+2024-11-14 15:02:48,732 - DocumentProcessor - INFO - Document created successfully
+PIN: 687520
+2024-11-14 15:02:48,732 - DocumentProcessor - INFO - Document created successfully
+PIN: 687520
+2024-11-14 15:02:48,732 - DocumentProcessor - INFO - Document created successfully
+PIN: 687520
