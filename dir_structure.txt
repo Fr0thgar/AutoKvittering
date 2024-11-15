@@ -19,5 +19,10 @@ project_root/
 │       ├── Lagermedarbejder_skabelon.docx
 │       └── Brugeroplysninger_skabelon.docx
 ├── tests/
+│   ├── __init__.py
+│   ├── test_config_manager.py
+│   ├── test_document_processor.py
+│   └── test_credential_generator.py
 ├── logs/
-└── config.json
+├── config.json
+└── requirements.txt
