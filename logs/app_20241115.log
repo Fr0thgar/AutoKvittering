@@ -1,0 +1,72 @@
+2024-11-15 10:53:11,536 - DocumentProcessor - INFO - Starting application
+2024-11-15 10:53:11,540 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 10:53:11,540 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 10:53:11,540 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 10:53:11,540 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 10:53:11,540 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 10:53:12,271 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 10:53:12,271 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 10:53:12,271 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 10:53:12,271 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 10:53:12,271 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 10:53:12,275 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 10:53:12,275 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 10:53:12,275 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 10:53:12,275 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 10:53:12,275 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 10:53:28,325 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 10:53:28,325 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 10:53:28,325 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 10:53:28,325 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 10:53:28,325 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 10:53:28,327 - DocumentProcessor - INFO - Generated new password
+2024-11-15 10:53:28,327 - DocumentProcessor - INFO - Generated new password
+2024-11-15 10:53:28,327 - DocumentProcessor - INFO - Generated new password
+2024-11-15 10:53:28,327 - DocumentProcessor - INFO - Generated new password
+2024-11-15 10:53:28,327 - DocumentProcessor - INFO - Generated new password
+2024-11-15 10:53:28,391 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test Testensen.docx
+2024-11-15 10:53:28,391 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test Testensen.docx
+2024-11-15 10:53:28,391 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test Testensen.docx
+2024-11-15 10:53:28,391 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test Testensen.docx
+2024-11-15 10:53:28,391 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test Testensen.docx
+2024-11-15 10:53:28,393 - DocumentProcessor - INFO - Document created successfully
+PIN: 166571
+2024-11-15 10:53:28,393 - DocumentProcessor - INFO - Document created successfully
+PIN: 166571
+2024-11-15 10:53:28,393 - DocumentProcessor - INFO - Document created successfully
+PIN: 166571
+2024-11-15 10:53:28,393 - DocumentProcessor - INFO - Document created successfully
+PIN: 166571
+2024-11-15 10:53:28,393 - DocumentProcessor - INFO - Document created successfully
+PIN: 166571
+2024-11-15 11:05:56,469 - DocumentProcessor - INFO - Starting application
+2024-11-15 11:05:56,470 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:05:56,470 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:05:56,470 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:05:56,470 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:05:56,470 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:05:56,586 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:05:56,586 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:05:56,586 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:05:56,586 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:05:56,586 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:05:56,590 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:05:56,590 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:05:56,590 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:05:56,590 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:05:56,590 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:06:26,686 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 11:06:26,686 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 11:06:26,686 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 11:06:26,686 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 11:06:26,686 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 11:06:26,688 - DocumentProcessor - INFO - Generated new password
+2024-11-15 11:06:26,688 - DocumentProcessor - INFO - Generated new password
+2024-11-15 11:06:26,688 - DocumentProcessor - INFO - Generated new password
+2024-11-15 11:06:26,688 - DocumentProcessor - INFO - Generated new password
+2024-11-15 11:06:26,688 - DocumentProcessor - INFO - Generated new password
+2024-11-15 11:06:26,741 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test .docx
+2024-11-15 11:06:26,741 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test .docx
+2024-11-15 11:06:26,741 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test .docx
+2024-11-15 11:06:26,741 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test .docx
+2024-11-15 11:06:26,741 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test .docx

@@ -194,8 +194,12 @@ class DocumentProcessorApp:
     
     def update_status(self, message, color="gray"):
         """Update status label with message and color"""
-        self.status_label.configure(text=message, text_color=color)
-
+        try:
+            self.status_label.configure(text=message, text_color=color)
+            self.root.update()  # Force immediate update
+        except Exception as e:
+            self.logger.error(f"Error updating status: {str(e)}")
+    
     def update_template_info(self, template_name):
         """Update template info based on selected template"""
         if template_name == "Lagermedarbejder_skabelon.docx":
@@ -210,7 +214,7 @@ class DocumentProcessorApp:
                 text=info,
                 text_color="blue"
             )
-
+    
     def on_template_change(self, *args):
         """Handle template selection changes"""
         selected_template = self.template_selector.get()
@@ -246,38 +250,56 @@ class DocumentProcessorApp:
             self.update_status("Processing document...", "blue")
             self.root.update()  # Force GUI update
             
-            # Generate credentials
-            pin = self.cred_generator.generate_pin()
-            print_pin = self.cred_generator.get_print_pin(pin)
-            password = self.cred_generator.generate_password()
-            
-            # Create replacements and process document
-            replacements = self.create_replacements_dict(
-                name, username, pin, print_pin, password
-            )
-            
-            template_path = os.path.join(
-                self.config.config["template_directory"],
-                template
-            )
-            
-            success, message = self.doc_processor.process_document(
-                template_path,
-                self.get_output_path(name),
-                replacements
-            )
-            
-            if success:
-                self.show_result(True, f"Document created successfully\nPIN: {pin}")
-                # Optionally clear inputs
-                self.name_input.set("")
-                self.username_input.set("")
-            else:
-                self.show_result(False, f"Error creating document: {message}")
+            try:
+                # Generate credentials
+                pin = self.cred_generator.generate_pin()
+                print_pin = self.cred_generator.get_print_pin(pin)
+                password = self.cred_generator.generate_password()
+                
+                # Create replacements and process document
+                replacements = self.create_replacements_dict(
+                    name, username, pin, print_pin, password
+                )
+                
+                template_path = os.path.join(
+                    self.config.config["template_directory"],
+                    template
+                )
+                
+                success, message = self.doc_processor.process_document(
+                    template_path,
+                    self.get_output_path(name),
+                    replacements
+                )
+                
+                if success:
+                    # Clear inputs first
+                    self.name_input.set("")
+                    self.username_input.set("")
+                    
+                    # Show success message with PIN
+                    success_message = f"Document created successfully!\nPIN: {pin}"
+                    self.update_status(success_message, "green")
+                    
+                    # Reset template info to default state
+                    self.update_template_info(template)
+                    
+                    # Force GUI update
+                    self.root.update()
+                else:
+                    self.update_status(f"Error: {message}", "red")
+                
+            except Exception as e:
+                self.logger.error(f"Error processing document: {str(e)}")
+                self.update_status(f"Error: {str(e)}", "red")
             
         except Exception as e:
-            self.logger.error(f"Error processing document: {str(e)}")
-            self.show_result(False, str(e))
+            self.logger.error(f"Error in process_document: {str(e)}")
+            self.update_status(f"Error: {str(e)}", "red")
+        
+        finally:
+            # Ensure the GUI is updated
+            self.root.update()
     
     def run(self):
         self.root.mainloop() 
