@@ -128,20 +128,28 @@ class DocumentProcessorApp:
             # You could add an error popup here
     
     def setup_window(self):
-        window_size = self.config.config["window_size"]
+        """Set up the main window properties"""
         self.root.title("Document Processor")
-        self.root.geometry(f"{window_size['width']}x{window_size['height']}")
+        self.root.geometry("600x400")  # Set a default size
+        self.root.minsize(400, 300)  # Set a minimum size for the window
+
+        # Configure grid layout
+        self.root.grid_rowconfigure(0, weight=1)  # Template selector row
+        self.root.grid_rowconfigure(1, weight=0)  # Status row
+        self.root.grid_rowconfigure(2, weight=1)  # Input fields row
+        self.root.grid_rowconfigure(3, weight=0)  # Button row
+        self.root.grid_columnconfigure(0, weight=1)  # Main column
     
     def create_widgets(self):
         # Create main container frames
         self.top_frame = customtkinter.CTkFrame(self.root)
-        self.status_frame = customtkinter.CTkFrame(self.root)  # New status frame
+        self.status_frame = customtkinter.CTkFrame(self.root)
         self.input_frame = customtkinter.CTkFrame(self.root)
         self.button_frame = customtkinter.CTkFrame(self.root)
         
-        # Pack frames with proper spacing
+        # Pack frames into the grid
         self.top_frame.grid(row=0, column=0, sticky="ew", padx=10, pady=5)
-        self.status_frame.grid(row=1, column=0, sticky="ew", padx=10, pady=(0, 5))  # Add status frame
+        self.status_frame.grid(row=1, column=0, sticky="ew", padx=10, pady=(0, 5))
         self.input_frame.grid(row=2, column=0, sticky="ew", padx=10, pady=5)
         self.button_frame.grid(row=3, column=0, sticky="ew", padx=10, pady=5)
 
@@ -151,7 +159,7 @@ class DocumentProcessorApp:
             self.get_template_list(),
             self.on_template_change
         )
-        self.template_selector.pack()
+        self.template_selector.pack(fill='x')  # Fill horizontally
         
         # Status label in status frame
         self.status_label = customtkinter.CTkLabel(
@@ -175,14 +183,11 @@ class DocumentProcessorApp:
             "Enter Name:",
             self.on_return
         )
-        self.name_input.pack(pady=(5, 0))  # Add padding for better spacing
-        
         self.username_input = InputField(
             self.input_frame,
             "Enter Username:",
             self.on_return
         )
-        self.username_input.pack(pady=(5, 0))  # Add padding for better spacing
         
         # Submit button in button frame
         self.submit_button = customtkinter.CTkButton(
@@ -219,13 +224,13 @@ class DocumentProcessorApp:
         self.name_input.pack_forget()
         self.username_input.pack_forget()
         
-        # Show appropriate fields and update status based on template
+        # Show appropriate fields based on the selected template
         if selected_template == "Lagermedarbejder_skabelon.docx":
-            self.name_input.pack(pady=(5, 0))
+            self.name_input.pack(pady=(5, 0))  # Show only the name input
             self.update_status("Lagermedarbejder template selected", "green")
         else:
-            self.name_input.pack(pady=(5, 0))
-            self.username_input.pack(pady=(5, 0))
+            self.name_input.pack(pady=(5, 0))  # Show name input
+            self.username_input.pack(pady=(5, 0))  # Show username input
             self.update_status("Brugeroplysninger template selected", "green")
         
         # Update template info

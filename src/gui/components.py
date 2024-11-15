@@ -5,29 +5,21 @@ class InputField:
     def __init__(self, parent, label_text, on_return=None):
         self.frame = customtkinter.CTkFrame(parent)
         
-        # Create label with default color
-        self.label = customtkinter.CTkLabel(
-            self.frame,
-            text=label_text,
-            text_color="gray"
-        )
+        self.label = customtkinter.CTkLabel(self.frame, text=label_text)
         self.entry = customtkinter.CTkEntry(self.frame)
         
-        self.label.pack(pady=(5,0))
-        self.entry.pack(pady=(0,5))
+        self.label.pack(pady=(5, 0))
+        self.entry.pack(pady=(0, 5))
         
         if on_return:
             self.entry.bind("<Return>", on_return)
     
-    def set_status(self, is_valid):
-        """Update label color based on validation"""
-        color = "green" if is_valid else "red"
-        self.label.configure(text_color=color)
-    
-    def pack(self):
-        self.frame.pack(fill='x', padx=5, pady=2)
+    def pack(self, **kwargs):
+        """Pack the frame with optional padding arguments"""
+        self.frame.pack(fill='x', padx=5, pady=kwargs.get('pady', (0, 0)))
     
     def pack_forget(self):
+        """Hide the input field"""
         self.frame.pack_forget()
     
     def get(self):
@@ -51,7 +43,7 @@ class TemplateSelector:
         )
         self.browse_button = customtkinter.CTkButton(
             self.frame,
-            text="Browse",
+            text="Change Template Directory",
             command=self.browse_directory
         )
         
@@ -59,8 +51,9 @@ class TemplateSelector:
         self.dropdown.pack(pady=(0,5))
         self.browse_button.pack(pady=(0,5))
     
-    def pack(self):
-        self.frame.pack(fill='x', padx=5, pady=2)
+    def pack(self, **kwargs):
+        """Pack the frame with optional arguments"""
+        self.frame.pack(padx=5, pady=2, **kwargs)
     
     def get(self):
         return self.var.get()
@@ -69,5 +62,5 @@ class TemplateSelector:
         self.var.set(value)
     
     def browse_directory(self):
-        # This should be implemented in the main app class
-        pass 
+        # Implement directory browsing logic here
+        pass

@@ -70,3 +70,161 @@ PIN: 166571
 2024-11-15 11:06:26,741 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test .docx
 2024-11-15 11:06:26,741 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test .docx
 2024-11-15 11:06:26,741 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test .docx
+2024-11-15 11:39:11,287 - DocumentProcessor - INFO - Starting application
+2024-11-15 11:39:11,289 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:39:11,289 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:39:11,289 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:39:11,289 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:39:11,289 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:39:11,403 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:39:11,403 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:39:11,403 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:39:11,403 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:39:11,403 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:39:11,407 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:39:11,407 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:39:11,407 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:39:11,407 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:39:11,407 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:39:11,443 - DocumentProcessor - ERROR - Application error: InputField.pack() got an unexpected keyword argument 'pady'
+2024-11-15 11:39:11,443 - DocumentProcessor - ERROR - Application error: InputField.pack() got an unexpected keyword argument 'pady'
+2024-11-15 11:39:11,443 - DocumentProcessor - ERROR - Application error: InputField.pack() got an unexpected keyword argument 'pady'
+2024-11-15 11:39:11,443 - DocumentProcessor - ERROR - Application error: InputField.pack() got an unexpected keyword argument 'pady'
+2024-11-15 11:39:11,443 - DocumentProcessor - ERROR - Application error: InputField.pack() got an unexpected keyword argument 'pady'
+2024-11-15 11:40:22,865 - DocumentProcessor - INFO - Starting application
+2024-11-15 11:40:22,868 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:40:22,868 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:40:22,868 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:40:22,868 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:40:22,868 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:40:22,988 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:40:22,988 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:40:22,988 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:40:22,988 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:40:22,988 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:40:22,992 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:40:22,992 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:40:22,992 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:40:22,992 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:40:22,992 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:40:43,252 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 11:40:43,252 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 11:40:43,252 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 11:40:43,252 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 11:40:43,252 - DocumentProcessor - INFO - Generated new PIN
+2024-11-15 11:40:43,254 - DocumentProcessor - INFO - Generated new password
+2024-11-15 11:40:43,254 - DocumentProcessor - INFO - Generated new password
+2024-11-15 11:40:43,254 - DocumentProcessor - INFO - Generated new password
+2024-11-15 11:40:43,254 - DocumentProcessor - INFO - Generated new password
+2024-11-15 11:40:43,254 - DocumentProcessor - INFO - Generated new password
+2024-11-15 11:40:43,307 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test.docx
+2024-11-15 11:40:43,307 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test.docx
+2024-11-15 11:40:43,307 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test.docx
+2024-11-15 11:40:43,307 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test.docx
+2024-11-15 11:40:43,307 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\15\Test.docx
+2024-11-15 11:42:20,555 - DocumentProcessor - INFO - Starting application
+2024-11-15 11:42:20,559 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:42:20,559 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:42:20,559 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:42:20,559 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:42:20,559 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:42:20,671 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:42:20,671 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:42:20,671 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:42:20,671 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:42:20,671 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:42:20,674 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:42:20,674 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:42:20,674 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:42:20,674 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:42:20,674 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:42:24,248 - DocumentProcessor - INFO - Starting application
+2024-11-15 11:42:24,251 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:42:24,251 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:42:24,251 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:42:24,251 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:42:24,251 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:42:24,366 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:42:24,366 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:42:24,366 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:42:24,366 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:42:24,366 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:42:24,369 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:42:24,369 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:42:24,369 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:42:24,369 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:42:24,369 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:43:55,346 - DocumentProcessor - INFO - Starting application
+2024-11-15 11:43:55,350 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:43:55,350 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:43:55,350 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:43:55,350 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:43:55,350 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:43:55,465 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:43:55,465 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:43:55,465 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:43:55,465 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:43:55,465 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:43:55,468 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:43:55,468 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:43:55,468 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:43:55,468 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:43:55,468 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:49:55,132 - DocumentProcessor - INFO - Starting application
+2024-11-15 11:49:55,135 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:49:55,135 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:49:55,135 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:49:55,135 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:49:55,135 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:49:55,258 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:49:55,258 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:49:55,258 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:49:55,258 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:49:55,258 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:49:55,261 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:49:55,261 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:49:55,261 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:49:55,261 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:49:55,261 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:49:55,287 - DocumentProcessor - ERROR - Application error: TemplateSelector.pack() got an unexpected keyword argument 'fill'
+2024-11-15 11:49:55,287 - DocumentProcessor - ERROR - Application error: TemplateSelector.pack() got an unexpected keyword argument 'fill'
+2024-11-15 11:49:55,287 - DocumentProcessor - ERROR - Application error: TemplateSelector.pack() got an unexpected keyword argument 'fill'
+2024-11-15 11:49:55,287 - DocumentProcessor - ERROR - Application error: TemplateSelector.pack() got an unexpected keyword argument 'fill'
+2024-11-15 11:49:55,287 - DocumentProcessor - ERROR - Application error: TemplateSelector.pack() got an unexpected keyword argument 'fill'
+2024-11-15 11:51:07,750 - DocumentProcessor - INFO - Starting application
+2024-11-15 11:51:07,752 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:51:07,752 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:51:07,752 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:51:07,752 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:51:07,752 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:51:07,864 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:51:07,864 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:51:07,864 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:51:07,864 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:51:07,864 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:51:07,867 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:51:07,867 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:51:07,867 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:51:07,867 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:51:07,867 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:51:07,892 - DocumentProcessor - ERROR - Application error: customtkinter.windows.widgets.core_widget_classes.ctk_base_class.CTkBaseClass.pack() got multiple values for keyword argument 'fill'
+2024-11-15 11:51:07,892 - DocumentProcessor - ERROR - Application error: customtkinter.windows.widgets.core_widget_classes.ctk_base_class.CTkBaseClass.pack() got multiple values for keyword argument 'fill'
+2024-11-15 11:51:07,892 - DocumentProcessor - ERROR - Application error: customtkinter.windows.widgets.core_widget_classes.ctk_base_class.CTkBaseClass.pack() got multiple values for keyword argument 'fill'
+2024-11-15 11:51:07,892 - DocumentProcessor - ERROR - Application error: customtkinter.windows.widgets.core_widget_classes.ctk_base_class.CTkBaseClass.pack() got multiple values for keyword argument 'fill'
+2024-11-15 11:51:07,892 - DocumentProcessor - ERROR - Application error: customtkinter.windows.widgets.core_widget_classes.ctk_base_class.CTkBaseClass.pack() got multiple values for keyword argument 'fill'
+2024-11-15 11:52:27,243 - DocumentProcessor - INFO - Starting application
+2024-11-15 11:52:27,246 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:52:27,246 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:52:27,246 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:52:27,246 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:52:27,246 - DocumentProcessor - ERROR - Error loading theme: expected str, bytes or os.PathLike object, not dict
+2024-11-15 11:52:27,357 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:52:27,357 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:52:27,357 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:52:27,357 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:52:27,357 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 11:52:27,359 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:52:27,359 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:52:27,359 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:52:27,359 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 11:52:27,359 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
