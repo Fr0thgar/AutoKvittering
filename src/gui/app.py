@@ -1,9 +1,11 @@
+import tkinter as tk  # Import tkinter for menu functionality
 import customtkinter
 import os
 import glob
 from .components import InputField, TemplateSelector
 from utils.logger import Logger
 import json
+from tkinter import filedialog  # Import filedialog for directory selection
 
 class DocumentProcessorApp:
     def __init__(self, config_manager, document_processor, credential_generator):
@@ -17,6 +19,7 @@ class DocumentProcessorApp:
         
         self.root = customtkinter.CTk()
         self.setup_window()
+        self.create_menu()
         self.create_widgets()
     
     def load_theme(self):
@@ -32,7 +35,7 @@ class DocumentProcessorApp:
             if os.path.exists(theme_path):
                 with open(theme_path, 'r') as f:
                     theme = json.load(f)
-                customtkinter.set_default_color_theme(theme)
+                customtkinter.set_default_color_theme(theme_path)
                 self.logger.info("Custom theme loaded successfully")
             else:
                 self.logger.warning("Theme file not found, using default theme")
@@ -140,6 +143,39 @@ class DocumentProcessorApp:
         self.root.grid_rowconfigure(3, weight=0)  # Button row
         self.root.grid_columnconfigure(0, weight=1)  # Main column
     
+    def create_menu(self):
+        """Create a menu bar with settings options"""
+        menu_bar = tk.Menu(self.root)  # Use tkinter's Menu
+        
+        # Create a "Settings" menu
+        settings_menu = tk.Menu(menu_bar, tearoff=0)
+        settings_menu.add_command(label="Change Template Directory", command=self.change_template_directory)
+        settings_menu.add_command(label="Change Theme Directory", command=self.change_theme_directory)
+        settings_menu.add_separator()
+        settings_menu.add_command(label="Exit", command=self.root.quit)
+        
+        # Add the settings menu to the menu bar
+        menu_bar.add_cascade(label="Settings", menu=settings_menu)
+        
+        # Configure the menu bar
+        self.root.config(menu=menu_bar)
+
+    def change_template_directory(self):
+        """Function to change the template directory"""
+        new_directory = filedialog.askdirectory(title="Select Template Directory")  # Use tkinter's filedialog
+        if new_directory:
+            self.config.config["template_directory"] = new_directory
+            self.config.save_config(self.config.config)  # Save the new config
+            self.logger.info(f"Template directory changed to: {new_directory}")
+
+    def change_theme_directory(self):
+        """Function to change the theme directory"""
+        new_directory = filedialog.askdirectory(title="Select Theme Directory")  # Use tkinter's filedialog
+        if new_directory:
+            self.config.config["theme_directory"] = new_directory
+            self.config.save_config(self.config.config)  # Save the new config
+            self.logger.info(f"Theme directory changed to: {new_directory}")
+
     def create_widgets(self):
         # Create main container frames
         self.top_frame = customtkinter.CTkFrame(self.root)

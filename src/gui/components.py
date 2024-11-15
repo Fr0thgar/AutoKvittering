@@ -41,15 +41,10 @@ class TemplateSelector:
             values=templates,
             command=on_change
         )
-        self.browse_button = customtkinter.CTkButton(
-            self.frame,
-            text="Change Template Directory",
-            command=self.browse_directory
-        )
         
-        self.label.pack(pady=(5,0))
-        self.dropdown.pack(pady=(0,5))
-        self.browse_button.pack(pady=(0,5))
+        # Pack components
+        self.label.pack(pady=(5, 0))
+        self.dropdown.pack(pady=(0, 5))
     
     def pack(self, **kwargs):
         """Pack the frame with optional arguments"""

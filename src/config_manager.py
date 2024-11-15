@@ -25,22 +25,26 @@ class ConfigManager:
             self.logger.info(f"Created template directory: {self.config['template_directory']}")
     
     def load_config(self):
-        try:
-            with open(self.config_file, 'r') as f:
-                try:
-                    return json.load(f)
-                except json.JSONDecodeError:
-                    self.logger.error("Config file is corrupted")
-                    return self.create_default_config()
-        except FileNotFoundError:
-            self.logger.warning("Config file not found, creating default")
+        """Load configuration from a JSON file"""
+        if not os.path.exists(self.config_file):
             return self.create_default_config()
+        
+        with open(self.config_file, 'r') as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                print("Error: Configuration file is empty or invalid. Creating default config.")
+                return self.create_default_config()
     
     def create_default_config(self):
+        """Create a default configuration and save it to a file"""
         default_config = {
-            "template_directory": os.path.join("resources", "templates"),
-            "theme_directory": os.path.join("resources", "themes"),
-            "window_size": {"width": 500, "height": 400},
+            "template_directory": "resources/templates",
+            "theme_directory": "resources/themes",
+            "window_size": {
+                "width": 500,
+                "height": 400
+            },
             "password_settings": {
                 "length": 12,
                 "use_uppercase": True,
@@ -54,6 +58,6 @@ class ConfigManager:
         return default_config
     
     def save_config(self, config):
+        """Save the configuration to a JSON file"""
         with open(self.config_file, 'w') as f:
-            json.dump(config, indent=4)
-        self.logger.info("Config saved successfully") 
+            json.dump(config, f, indent=4)  # Ensure the file object is passed correctly 
