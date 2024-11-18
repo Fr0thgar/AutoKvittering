@@ -62,6 +62,25 @@ class ConfigManager:
             return {}  # Fallback to default theme
     
     def create_default_config(self):
+        """Create a default configuration"""
+        default_config = {
+            "template_directory": "",
+            "theme_directory": "",
+            "last_used_template": "",
+            "last_used_theme": "",
+            "button_fg_color": "lightblue",
+            "button_hover_color": "blue",
+            "button_text_color": "white"
+        }
+        self.save_config(default_config)
+        return default_config
+    
+    def save_config(self, config):
+        """Save the configuration to a JSON file"""
+        with open(self.config_file, 'w') as f:
+            json.dump(config, f, indent=4)
+    
+    def create_default_config(self):
         """Create a default configuration and save it to a file"""
         default_config = {
             "template_directory": "resources/templates",

@@ -14,14 +14,15 @@ class DocumentProcessorApp:
         self.cred_generator = credential_generator
         self.logger = Logger()
         
-        # Load theme before creating the window
-        self.load_theme()
-        
-        self.root = customtkinter.CTk()
+        # Initialize the main window first
+        self.root = customtkinter.CTk()  # Use CTk for the main window
         self.setup_window()
-        self.create_menu()
+        
+        # Create the settings frame before applying the theme
+        self.create_settings_frame()  # Create the settings frame first
+
+        self.create_menu()  # Create the menu
         self.create_widgets()
-        self.create_settings_frame()
     
     def load_theme(self):
         """Load custom theme from JSON file"""
@@ -185,11 +186,7 @@ class DocumentProcessorApp:
         change_template_button = customtkinter.CTkButton(
             self.settings_frame,
             text="Change Template Directory",
-            command=self.change_template_directory,
-            fg_color=self.config.theme.get("button_fg_color", "lightblue"),
-            hover_color=self.config.theme.get("button_hover_color", "blue"),
-            text_color=self.config.theme.get("button_text_color", "white"),
-            font=("Arial", 12)
+            command=self.change_template_directory
         )
         change_template_button.pack(pady=5)
 
@@ -197,11 +194,7 @@ class DocumentProcessorApp:
         change_theme_button = customtkinter.CTkButton(
             self.settings_frame,
             text="Change Theme Directory",
-            command=self.change_theme_directory,
-            fg_color=self.config.theme.get("button_fg_color", "lightblue"),
-            hover_color=self.config.theme.get("button_hover_color", "blue"),
-            text_color=self.config.theme.get("button_text_color", "white"),
-            font=("Arial", 12)
+            command=self.change_theme_directory
         )
         change_theme_button.pack(pady=5)
 
@@ -209,11 +202,7 @@ class DocumentProcessorApp:
         close_button = customtkinter.CTkButton(
             self.settings_frame,
             text="Close",
-            command=self.toggle_settings_frame,
-            fg_color=self.config.theme.get("button_fg_color", "lightblue"),
-            hover_color=self.config.theme.get("button_hover_color", "blue"),
-            text_color=self.config.theme.get("button_text_color", "white"),
-            font=("Arial", 12)
+            command=self.toggle_settings_frame
         )
         close_button.pack(pady=10)
 
@@ -223,9 +212,9 @@ class DocumentProcessorApp:
     def toggle_settings_frame(self):
         """Toggle the visibility of the settings frame"""
         if self.settings_frame.winfo_ismapped():
-            self.settings_frame.pack_forget()
+            self.settings_frame.grid_remove()  # Use grid_remove if using grid
         else:
-            self.settings_frame.pack(pady=10)
+            self.settings_frame.grid(row=4, column=0, sticky="ew", padx=10, pady=5)  # Use grid if using grid
 
     def change_template_directory(self):
         """Function to change the template directory"""
@@ -233,6 +222,7 @@ class DocumentProcessorApp:
             new_directory = filedialog.askdirectory(title="Select Template Directory")
             if new_directory:
                 self.config.config["template_directory"] = new_directory
+                self.config.config["last_used_template"] = new_directory  # Save as user preference
                 self.config.save_config(self.config.config)  # Save the new config
                 self.logger.info(f"Template directory changed to: {new_directory}")
                 customtkinter.CTkMessageBox.show_info("Success", "Template directory changed successfully.")
@@ -246,6 +236,7 @@ class DocumentProcessorApp:
             new_directory = filedialog.askdirectory(title="Select Theme Directory")
             if new_directory:
                 self.config.config["theme_directory"] = new_directory
+                self.config.config["last_used_theme"] = new_directory  # Save as user preference
                 self.config.save_config(self.config.config)  # Save the new config
                 self.logger.info(f"Theme directory changed to: {new_directory}")
                 customtkinter.CTkMessageBox.show_info("Success", "Theme directory changed successfully.")
@@ -259,12 +250,15 @@ class DocumentProcessorApp:
         self.status_frame = customtkinter.CTkFrame(self.root)
         self.input_frame = customtkinter.CTkFrame(self.root)
         self.button_frame = customtkinter.CTkFrame(self.root)
-        
-        # Pack frames into the grid
-        self.top_frame.grid(row=0, column=0, sticky="ew", padx=10, pady=5)
+        self.settings_frame = customtkinter.CTkFrame(self.root)  # Define settings frame here
+
+        # Grid frames into the main window
+        self.top_frame.grid(row=0, column=0, sticky="ew", padx=10, pady=5)  # Use grid
         self.status_frame.grid(row=1, column=0, sticky="ew", padx=10, pady=(0, 5))
         self.input_frame.grid(row=2, column=0, sticky="ew", padx=10, pady=5)
         self.button_frame.grid(row=3, column=0, sticky="ew", padx=10, pady=5)
+        self.settings_frame.grid(row=4, column=0, sticky="ew", padx=10, pady=5)  # Use grid for settings frame
+        self.settings_frame.grid_remove()  # Initially hide the settings frame
 
         # Template selector in top frame
         self.template_selector = TemplateSelector(
@@ -408,3 +402,5 @@ class DocumentProcessorApp:
     
     def run(self):
         self.root.mainloop() 
+    
+    

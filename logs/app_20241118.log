@@ -14,3 +14,229 @@
 2024-11-18 09:33:14,481 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
 2024-11-18 09:33:14,481 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
 2024-11-18 09:33:14,481 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 10:09:28,377 - DocumentProcessor - INFO - Starting application
+2024-11-18 10:09:28,380 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 10:09:28,380 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 10:09:28,380 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 10:09:28,380 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 10:09:28,380 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 10:09:28,541 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 10:09:28,541 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 10:09:28,541 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 10:09:28,541 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 10:09:28,541 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 10:09:28,543 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 10:09:28,543 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 10:09:28,543 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 10:09:28,543 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 10:09:28,543 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:05:55,352 - DocumentProcessor - INFO - Starting application
+2024-11-18 11:05:55,354 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:05:55,354 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:05:55,354 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:05:55,354 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:05:55,354 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:05:55,524 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:05:55,524 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:05:55,524 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:05:55,524 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:05:55,524 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:05:55,526 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:05:55,526 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:05:55,526 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:05:55,526 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:05:55,526 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:06:06,152 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 11:06:06,152 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 11:06:06,152 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 11:06:06,152 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 11:06:06,152 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 11:06:06,153 - DocumentProcessor - INFO - Generated new password
+2024-11-18 11:06:06,153 - DocumentProcessor - INFO - Generated new password
+2024-11-18 11:06:06,153 - DocumentProcessor - INFO - Generated new password
+2024-11-18 11:06:06,153 - DocumentProcessor - INFO - Generated new password
+2024-11-18 11:06:06,153 - DocumentProcessor - INFO - Generated new password
+2024-11-18 11:06:06,240 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\test testesbebetnea.docx
+2024-11-18 11:06:06,240 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\test testesbebetnea.docx
+2024-11-18 11:06:06,240 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\test testesbebetnea.docx
+2024-11-18 11:06:06,240 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\test testesbebetnea.docx
+2024-11-18 11:06:06,240 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\test testesbebetnea.docx
+2024-11-18 11:06:15,852 - DocumentProcessor - INFO - Starting application
+2024-11-18 11:06:15,855 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:06:15,855 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:06:15,855 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:06:15,855 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:06:15,855 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:06:15,996 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:06:15,996 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:06:15,996 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:06:15,996 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:06:15,996 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:06:15,998 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:06:15,998 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:06:15,998 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:06:15,998 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:06:15,998 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:07:06,337 - DocumentProcessor - INFO - Starting application
+2024-11-18 11:07:06,339 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:07:06,339 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:07:06,339 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:07:06,339 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:07:06,339 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 11:07:06,476 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:07:06,476 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:07:06,476 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:07:06,476 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:07:06,476 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 11:07:06,480 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:07:06,480 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:07:06,480 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:07:06,480 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 11:07:06,480 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:38:01,524 - DocumentProcessor - INFO - Starting application
+2024-11-18 12:38:01,528 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:38:01,528 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:38:01,528 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:38:01,528 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:38:01,528 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:38:02,167 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:38:02,167 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:38:02,167 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:38:02,167 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:38:02,167 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:38:02,169 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:38:02,169 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:38:02,169 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:38:02,169 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:38:02,169 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:38:10,753 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 12:38:10,753 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 12:38:10,753 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 12:38:10,753 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 12:38:10,753 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 12:38:10,755 - DocumentProcessor - INFO - Generated new password
+2024-11-18 12:38:10,755 - DocumentProcessor - INFO - Generated new password
+2024-11-18 12:38:10,755 - DocumentProcessor - INFO - Generated new password
+2024-11-18 12:38:10,755 - DocumentProcessor - INFO - Generated new password
+2024-11-18 12:38:10,755 - DocumentProcessor - INFO - Generated new password
+2024-11-18 12:38:10,827 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\treaetrareta.docx
+2024-11-18 12:38:10,827 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\treaetrareta.docx
+2024-11-18 12:38:10,827 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\treaetrareta.docx
+2024-11-18 12:38:10,827 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\treaetrareta.docx
+2024-11-18 12:38:10,827 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\treaetrareta.docx
+2024-11-18 12:38:23,244 - DocumentProcessor - INFO - Starting application
+2024-11-18 12:38:23,247 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:38:23,247 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:38:23,247 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:38:23,247 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:38:23,247 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:38:23,410 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:38:23,410 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:38:23,410 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:38:23,410 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:38:23,410 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:38:23,413 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:38:23,413 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:38:23,413 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:38:23,413 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:38:23,413 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:45:01,190 - DocumentProcessor - INFO - Starting application
+2024-11-18 12:45:01,192 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:45:01,192 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:45:01,192 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:45:01,192 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:45:01,192 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:45:01,345 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:45:01,345 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:45:01,345 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:45:01,345 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:45:01,345 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:45:01,348 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:45:01,348 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:45:01,348 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:45:01,348 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:45:01,348 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:46:39,130 - DocumentProcessor - INFO - Starting application
+2024-11-18 12:46:39,131 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:46:39,131 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:46:39,131 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:46:39,131 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:46:39,131 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-18 12:46:39,289 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:46:39,289 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:46:39,289 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:46:39,289 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:46:39,289 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 12:46:39,292 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:46:39,292 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:46:39,292 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:46:39,292 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:46:39,292 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 12:47:12,532 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 12:47:12,532 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 12:47:12,532 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 12:47:12,532 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 12:47:12,532 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 12:47:12,534 - DocumentProcessor - INFO - Generated new password
+2024-11-18 12:47:12,534 - DocumentProcessor - INFO - Generated new password
+2024-11-18 12:47:12,534 - DocumentProcessor - INFO - Generated new password
+2024-11-18 12:47:12,534 - DocumentProcessor - INFO - Generated new password
+2024-11-18 12:47:12,534 - DocumentProcessor - INFO - Generated new password
+2024-11-18 12:47:12,577 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\test.docx
+2024-11-18 12:47:12,577 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\test.docx
+2024-11-18 12:47:12,577 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\test.docx
+2024-11-18 12:47:12,577 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\test.docx
+2024-11-18 12:47:12,577 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\2024\November\18\test.docx
+2024-11-18 12:50:11,167 - DocumentProcessor - INFO - Starting application
+2024-11-18 12:50:11,169 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'root'
+2024-11-18 12:50:11,169 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'root'
+2024-11-18 12:50:11,169 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'root'
+2024-11-18 12:50:11,169 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'root'
+2024-11-18 12:50:11,169 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'root'
+2024-11-18 12:50:55,452 - DocumentProcessor - INFO - Starting application
+2024-11-18 12:50:55,553 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'settings_frame'
+2024-11-18 12:50:55,553 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'settings_frame'
+2024-11-18 12:50:55,553 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'settings_frame'
+2024-11-18 12:50:55,553 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'settings_frame'
+2024-11-18 12:50:55,553 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'settings_frame'
+2024-11-18 12:52:06,722 - DocumentProcessor - INFO - Starting application
+2024-11-18 12:52:06,865 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 12:52:06,865 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 12:52:06,865 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 12:52:06,865 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 12:52:06,865 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:00:22,903 - DocumentProcessor - INFO - Starting application
+2024-11-18 13:00:23,044 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:00:23,044 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:00:23,044 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:00:23,044 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:00:23,044 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:02:05,898 - DocumentProcessor - INFO - Starting application
+2024-11-18 13:02:06,020 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:02:06,020 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:02:06,020 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:02:06,020 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:02:06,020 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:03:42,396 - DocumentProcessor - INFO - Starting application
+2024-11-18 13:03:42,539 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:03:42,539 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:03:42,539 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:03:42,539 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:03:42,539 - DocumentProcessor - ERROR - Application error: bad screen distance "PY_VAR0"
+2024-11-18 13:07:34,994 - DocumentProcessor - INFO - Starting application
+2024-11-18 13:07:35,127 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'apply_theme'
+2024-11-18 13:07:35,127 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'apply_theme'
+2024-11-18 13:07:35,127 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'apply_theme'
+2024-11-18 13:07:35,127 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'apply_theme'
+2024-11-18 13:07:35,127 - DocumentProcessor - ERROR - Application error: 'DocumentProcessorApp' object has no attribute 'apply_theme'
+2024-11-18 13:08:20,393 - DocumentProcessor - INFO - Starting application
+2024-11-18 13:08:20,555 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 13:08:20,555 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 13:08:20,555 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 13:08:20,555 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 13:08:20,555 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-18 13:08:20,559 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 13:08:20,559 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 13:08:20,559 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 13:08:20,559 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 13:08:20,559 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
