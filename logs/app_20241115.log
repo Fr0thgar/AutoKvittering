@@ -393,3 +393,35 @@ PIN: 166571
 2024-11-15 15:05:44,845 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
 2024-11-15 15:05:44,845 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
 2024-11-15 15:05:44,845 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 15:09:30,367 - DocumentProcessor - INFO - Starting application
+2024-11-15 15:09:30,370 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-15 15:09:30,370 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-15 15:09:30,370 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-15 15:09:30,370 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-15 15:09:30,370 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-15 15:09:30,526 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 15:09:30,526 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 15:09:30,526 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 15:09:30,526 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 15:09:30,526 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 15:09:30,529 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 15:09:30,529 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 15:09:30,529 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 15:09:30,529 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 15:09:30,529 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 15:13:37,482 - DocumentProcessor - INFO - Starting application
+2024-11-15 15:13:37,484 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-15 15:13:37,484 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-15 15:13:37,484 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-15 15:13:37,484 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-15 15:13:37,484 - DocumentProcessor - INFO - Custom theme loaded successfully
+2024-11-15 15:13:37,640 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 15:13:37,640 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 15:13:37,640 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 15:13:37,640 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 15:13:37,640 - DocumentProcessor - INFO - Looking for templates in: c:\Users\jbs\Code\AutoKvittering\resources/templates
+2024-11-15 15:13:37,642 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 15:13:37,642 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 15:13:37,642 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 15:13:37,642 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-15 15:13:37,642 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']

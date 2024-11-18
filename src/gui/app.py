@@ -21,6 +21,7 @@ class DocumentProcessorApp:
         self.setup_window()
         self.create_menu()
         self.create_widgets()
+        self.create_settings_frame()
     
     def load_theme(self):
         """Load custom theme from JSON file"""
@@ -149,8 +150,20 @@ class DocumentProcessorApp:
         
         # Create a "Settings" menu
         settings_menu = tk.Menu(menu_bar, tearoff=0)
-        settings_menu.add_command(label="Change Template Directory", command=self.change_template_directory)
-        settings_menu.add_command(label="Change Theme Directory", command=self.change_theme_directory)
+        
+        # Create a styled button for showing settings
+        show_settings_button = customtkinter.CTkButton(
+            self.root,
+            text="Show Settings",
+            command=self.toggle_settings_frame,
+            fg_color=self.config.theme.get("button_fg_color", "lightblue"),  # Use theme color
+            hover_color=self.config.theme.get("button_hover_color", "blue"),  # Use theme hover color
+            text_color=self.config.theme.get("button_text_color", "white"),  # Use theme text color
+            font=("Arial", 12)  # Set font style and size
+        )
+        
+        # Add the button to the menu
+        settings_menu.add_command(label="Show Settings", command=self.toggle_settings_frame)
         settings_menu.add_separator()
         settings_menu.add_command(label="Exit", command=self.root.quit)
         
@@ -160,21 +173,85 @@ class DocumentProcessorApp:
         # Configure the menu bar
         self.root.config(menu=menu_bar)
 
+    def create_settings_frame(self):
+        """Create a frame for settings options"""
+        self.settings_frame = customtkinter.CTkFrame(self.root)
+        
+        # Title label
+        title_label = customtkinter.CTkLabel(self.settings_frame, text="Settings", font=("Arial", 16))
+        title_label.pack(pady=10)
+
+        # Change Template Directory Button
+        change_template_button = customtkinter.CTkButton(
+            self.settings_frame,
+            text="Change Template Directory",
+            command=self.change_template_directory,
+            fg_color=self.config.theme.get("button_fg_color", "lightblue"),
+            hover_color=self.config.theme.get("button_hover_color", "blue"),
+            text_color=self.config.theme.get("button_text_color", "white"),
+            font=("Arial", 12)
+        )
+        change_template_button.pack(pady=5)
+
+        # Change Theme Directory Button
+        change_theme_button = customtkinter.CTkButton(
+            self.settings_frame,
+            text="Change Theme Directory",
+            command=self.change_theme_directory,
+            fg_color=self.config.theme.get("button_fg_color", "lightblue"),
+            hover_color=self.config.theme.get("button_hover_color", "blue"),
+            text_color=self.config.theme.get("button_text_color", "white"),
+            font=("Arial", 12)
+        )
+        change_theme_button.pack(pady=5)
+
+        # Close Settings Button
+        close_button = customtkinter.CTkButton(
+            self.settings_frame,
+            text="Close",
+            command=self.toggle_settings_frame,
+            fg_color=self.config.theme.get("button_fg_color", "lightblue"),
+            hover_color=self.config.theme.get("button_hover_color", "blue"),
+            text_color=self.config.theme.get("button_text_color", "white"),
+            font=("Arial", 12)
+        )
+        close_button.pack(pady=10)
+
+        # Initially hide the settings frame
+        self.settings_frame.pack_forget()
+
+    def toggle_settings_frame(self):
+        """Toggle the visibility of the settings frame"""
+        if self.settings_frame.winfo_ismapped():
+            self.settings_frame.pack_forget()
+        else:
+            self.settings_frame.pack(pady=10)
+
     def change_template_directory(self):
         """Function to change the template directory"""
-        new_directory = filedialog.askdirectory(title="Select Template Directory")  # Use tkinter's filedialog
-        if new_directory:
-            self.config.config["template_directory"] = new_directory
-            self.config.save_config(self.config.config)  # Save the new config
-            self.logger.info(f"Template directory changed to: {new_directory}")
+        try:
+            new_directory = filedialog.askdirectory(title="Select Template Directory")
+            if new_directory:
+                self.config.config["template_directory"] = new_directory
+                self.config.save_config(self.config.config)  # Save the new config
+                self.logger.info(f"Template directory changed to: {new_directory}")
+                customtkinter.CTkMessageBox.show_info("Success", "Template directory changed successfully.")
+        except Exception as e:
+            self.logger.error(f"Error changing template directory: {str(e)}")
+            customtkinter.CTkMessageBox.show_error("Error", "Failed to change template directory. Please try again.")
 
     def change_theme_directory(self):
         """Function to change the theme directory"""
-        new_directory = filedialog.askdirectory(title="Select Theme Directory")  # Use tkinter's filedialog
-        if new_directory:
-            self.config.config["theme_directory"] = new_directory
-            self.config.save_config(self.config.config)  # Save the new config
-            self.logger.info(f"Theme directory changed to: {new_directory}")
+        try:
+            new_directory = filedialog.askdirectory(title="Select Theme Directory")
+            if new_directory:
+                self.config.config["theme_directory"] = new_directory
+                self.config.save_config(self.config.config)  # Save the new config
+                self.logger.info(f"Theme directory changed to: {new_directory}")
+                customtkinter.CTkMessageBox.show_info("Success", "Theme directory changed successfully.")
+        except Exception as e:
+            self.logger.error(f"Error changing theme directory: {str(e)}")
+            customtkinter.CTkMessageBox.show_error("Error", "Failed to change theme directory. Please try again.")
 
     def create_widgets(self):
         # Create main container frames

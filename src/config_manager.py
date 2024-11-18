@@ -1,13 +1,16 @@
 import json
 import os
 from utils.logger import Logger
+import customtkinter
 
 class ConfigManager:
     def __init__(self):
         self.logger = Logger()
         self.base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self.config_file = os.path.join(self.base_dir, 'config.json')
+        self.theme_file = os.path.join(self.base_dir, 'resources/themes/theme.json')
         self.config = self.load_config()
+        self.theme = self.load_theme()
         self.resolve_paths()
     
     def resolve_paths(self):
@@ -26,15 +29,37 @@ class ConfigManager:
     
     def load_config(self):
         """Load configuration from a JSON file"""
-        if not os.path.exists(self.config_file):
-            return self.create_default_config()
-        
-        with open(self.config_file, 'r') as f:
-            try:
-                return json.load(f)
-            except json.JSONDecodeError:
-                print("Error: Configuration file is empty or invalid. Creating default config.")
+        try:
+            if not os.path.exists(self.config_file):
                 return self.create_default_config()
+            
+            with open(self.config_file, 'r') as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            self.logger.error("Configuration file is invalid or corrupted.")
+            customtkinter.CTkMessageBox.show_error("Error", "Configuration file is invalid. Please check the file.")
+            return self.create_default_config()  # Fallback to default config
+        except Exception as e:
+            self.logger.error(f"Error loading configuration: {str(e)}")
+            customtkinter.CTkMessageBox.show_error("Error", "Failed to load configuration. Please try again.")
+            return self.create_default_config()  # Fallback to default config
+    
+    def load_theme(self):
+        """Load theme from a JSON file"""
+        try:
+            if not os.path.exists(self.theme_file):
+                return {}
+            
+            with open(self.theme_file, 'r') as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            self.logger.error("Theme file is invalid or corrupted.")
+            customtkinter.CTkMessageBox.show_error("Error", "Theme file is invalid. Please check the file.")
+            return {}  # Fallback to default theme
+        except Exception as e:
+            self.logger.error(f"Error loading theme: {str(e)}")
+            customtkinter.CTkMessageBox.show_error("Error", "Failed to load theme. Please try again.")
+            return {}  # Fallback to default theme
     
     def create_default_config(self):
         """Create a default configuration and save it to a file"""
