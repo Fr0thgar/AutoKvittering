@@ -1,0 +1,50 @@
+2024-11-18 15:49:23,633 - DocumentProcessor - INFO - Starting application
+2024-11-18 15:49:23,636 - DocumentProcessor - INFO - Created template directory: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:49:23,636 - DocumentProcessor - INFO - Created template directory: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:49:24,259 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:49:24,259 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:49:24,259 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:49:24,259 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:49:24,259 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:49:24,265 - DocumentProcessor - WARNING - No templates found in C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:49:24,265 - DocumentProcessor - WARNING - No templates found in C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:49:24,265 - DocumentProcessor - WARNING - No templates found in C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:49:24,265 - DocumentProcessor - WARNING - No templates found in C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:49:24,265 - DocumentProcessor - WARNING - No templates found in C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:50:34,029 - DocumentProcessor - INFO - Starting application
+2024-11-18 15:50:34,215 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:50:34,215 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:50:34,215 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:50:34,215 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:50:34,215 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:50:34,217 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 15:50:34,217 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 15:50:34,217 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 15:50:34,217 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 15:50:34,217 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 15:50:41,133 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 15:50:41,133 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 15:50:41,133 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 15:50:41,133 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 15:50:41,133 - DocumentProcessor - INFO - Generated new PIN
+2024-11-18 15:50:41,134 - DocumentProcessor - INFO - Generated new password
+2024-11-18 15:50:41,134 - DocumentProcessor - INFO - Generated new password
+2024-11-18 15:50:41,134 - DocumentProcessor - INFO - Generated new password
+2024-11-18 15:50:41,134 - DocumentProcessor - INFO - Generated new password
+2024-11-18 15:50:41,134 - DocumentProcessor - INFO - Generated new password
+2024-11-18 15:50:41,175 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\src\dist\main\2024\November\18\test.docx
+2024-11-18 15:50:41,175 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\src\dist\main\2024\November\18\test.docx
+2024-11-18 15:50:41,175 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\src\dist\main\2024\November\18\test.docx
+2024-11-18 15:50:41,175 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\src\dist\main\2024\November\18\test.docx
+2024-11-18 15:50:41,175 - DocumentProcessor - INFO - Document processed successfully: C:\Users\jbs\Code\AutoKvittering\src\dist\main\2024\November\18\test.docx
+2024-11-18 15:52:02,074 - DocumentProcessor - INFO - Starting application
+2024-11-18 15:52:02,286 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:52:02,286 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:52:02,286 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:52:02,286 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:52:02,286 - DocumentProcessor - INFO - Looking for templates in: C:\Users\jbs\Code\AutoKvittering\src\dist\main\resources/templates
+2024-11-18 15:52:02,288 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 15:52:02,288 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 15:52:02,288 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 15:52:02,288 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
+2024-11-18 15:52:02,288 - DocumentProcessor - INFO - Found templates: ['Brugeroplysninger_skabelon.docx', 'Lagermedarbejder_skabelon.docx']
