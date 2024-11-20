@@ -182,6 +182,14 @@ class DocumentProcessorApp:
         title_label = customtkinter.CTkLabel(self.settings_frame, text="Settings", font=("Arial", 16))
         title_label.pack(pady=10)
 
+        # Change Output Directory Button
+        change_output_directory_button = customtkinter.CTkButton(
+            self.settings_frame,
+            text="Change Output Directory",
+            command=self.change_output_directory
+        )
+        change_output_directory_button.pack(pady=5)
+
         # Change Template Directory Button
         change_template_button = customtkinter.CTkButton(
             self.settings_frame,
@@ -215,6 +223,14 @@ class DocumentProcessorApp:
             self.settings_frame.grid_remove()  # Use grid_remove if using grid
         else:
             self.settings_frame.grid(row=4, column=0, sticky="ew", padx=10, pady=5)  # Use grid if using grid
+
+    def change_output_directory(self):
+        """Function to change the output directory for generated documents"""
+        new_directory = filedialog.askdirectory(title="Select Output Directory")
+        if new_directory:
+            self.config.config["output_directory"] = new_directory  # Save the new directory in config
+            self.config.save_config(self.config.config)  # Save the updated config
+            customtkinter.CTkMessageBox.show_info("Success", "Output directory changed successfully.")
 
     def change_template_directory(self):
         """Function to change the template directory"""
@@ -402,5 +418,22 @@ class DocumentProcessorApp:
     
     def run(self):
         self.root.mainloop() 
+    
+    def generate_document(self):
+        """Function to generate a document and save it to the selected output directory"""
+        output_directory = self.config.config.get("output_directory", "")  # Get the output directory
+        if not output_directory:
+            customtkinter.CTkMessageBox.show_error("Error", "Please select an output directory first.")
+            return
+
+        # Generate the document (this is a placeholder for your document generation logic)
+        document_name = "generated_document.docx"  # Example document name
+        document_path = os.path.join(output_directory, document_name)
+
+        # Save the document (replace this with your actual saving logic)
+        with open(document_path, 'w') as f:
+            f.write("This is a generated document.")
+
+        customtkinter.CTkMessageBox.show_info("Success", f"Document saved to {document_path}.")
     
     

@@ -68,6 +68,7 @@ class ConfigManager:
             "theme_directory": "",
             "last_used_template": "",
             "last_used_theme": "",
+            "output_directory": "",
             "button_fg_color": "lightblue",
             "button_hover_color": "blue",
             "button_text_color": "white"
