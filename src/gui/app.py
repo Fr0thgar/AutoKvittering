@@ -133,17 +133,18 @@ class DocumentProcessorApp:
             # You could add an error popup here
     
     def setup_window(self):
-        """Set up the main window properties"""
+        """Set up the main application window"""
         self.root.title("Document Processor")
-        self.root.geometry("600x400")  # Set a default size
-        self.root.minsize(400, 300)  # Set a minimum size for the window
-
+        
         # Configure grid layout
         self.root.grid_rowconfigure(0, weight=1)  # Template selector row
-        self.root.grid_rowconfigure(1, weight=0)  # Status row
-        self.root.grid_rowconfigure(2, weight=1)  # Input fields row
-        self.root.grid_rowconfigure(3, weight=0)  # Button row
+        self.root.grid_rowconfigure(1, weight=1)  # Status row
+        self.root.grid_rowconfigure(2, weight=1)  # Input row
+        self.root.grid_rowconfigure(3, weight=1)  # Button row
         self.root.grid_columnconfigure(0, weight=1)  # Main column
+
+        # Create and place your frames and widgets using grid
+        self.create_widgets()  # Ensure this method uses grid as well
     
     def create_menu(self):
         """Create a menu bar with settings options"""
@@ -220,9 +221,9 @@ class DocumentProcessorApp:
     def toggle_settings_frame(self):
         """Toggle the visibility of the settings frame"""
         if self.settings_frame.winfo_ismapped():
-            self.settings_frame.grid_remove()  # Use grid_remove if using grid
+            self.settings_frame.pack_forget()  # Hide the settings frame
         else:
-            self.settings_frame.grid(row=4, column=0, sticky="ew", padx=10, pady=5)  # Use grid if using grid
+            self.settings_frame.pack(pady=10)  # Show the settings frame
 
     def change_output_directory(self):
         """Function to change the output directory for generated documents"""
@@ -261,64 +262,15 @@ class DocumentProcessorApp:
             customtkinter.CTkMessageBox.show_error("Error", "Failed to change theme directory. Please try again.")
 
     def create_widgets(self):
-        # Create main container frames
+        """Create the main widgets for the application"""
         self.top_frame = customtkinter.CTkFrame(self.root)
-        self.status_frame = customtkinter.CTkFrame(self.root)
-        self.input_frame = customtkinter.CTkFrame(self.root)
-        self.button_frame = customtkinter.CTkFrame(self.root)
-        self.settings_frame = customtkinter.CTkFrame(self.root)  # Define settings frame here
+        self.top_frame.pack(fill='x', padx=10, pady=5)  # Use pack without row/column options
 
-        # Grid frames into the main window
-        self.top_frame.grid(row=0, column=0, sticky="ew", padx=10, pady=5)  # Use grid
-        self.status_frame.grid(row=1, column=0, sticky="ew", padx=10, pady=(0, 5))
-        self.input_frame.grid(row=2, column=0, sticky="ew", padx=10, pady=5)
-        self.button_frame.grid(row=3, column=0, sticky="ew", padx=10, pady=5)
-        self.settings_frame.grid(row=4, column=0, sticky="ew", padx=10, pady=5)  # Use grid for settings frame
-        self.settings_frame.grid_remove()  # Initially hide the settings frame
+        # Add other widgets to top_frame using pack
+        label = customtkinter.CTkLabel(self.top_frame, text="Welcome to Document Processor")
+        label.pack(pady=10)
 
-        # Template selector in top frame
-        self.template_selector = TemplateSelector(
-            self.top_frame,
-            self.get_template_list(),
-            self.on_template_change
-        )
-        self.template_selector.pack(fill='x')  # Fill horizontally
-        
-        # Status label in status frame
-        self.status_label = customtkinter.CTkLabel(
-            self.status_frame,
-            text="Please select a template",
-            text_color="gray"
-        )
-        self.status_label.pack(pady=5)
-        
-        # Template info label
-        self.template_info = customtkinter.CTkLabel(
-            self.status_frame,
-            text="",
-            text_color="gray"
-        )
-        self.template_info.pack(pady=(0, 5))
-        
-        # Input fields in input frame
-        self.name_input = InputField(
-            self.input_frame,
-            "Enter Name:",
-            self.on_return
-        )
-        self.username_input = InputField(
-            self.input_frame,
-            "Enter Username:",
-            self.on_return
-        )
-        
-        # Submit button in button frame
-        self.submit_button = customtkinter.CTkButton(
-            self.button_frame,
-            text="Submit",
-            command=self.process_document
-        )
-        self.submit_button.pack(pady=10)
+        # Add more widgets as needed
     
     def update_status(self, message, color="gray"):
         """Update status label with message and color"""
